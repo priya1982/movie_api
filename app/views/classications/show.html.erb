@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @classication.number %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @classication.category %>
+</p>
+
+<%= link_to 'Edit', edit_classication_path(@classication) %> |
+<%= link_to 'Back', classications_path %>

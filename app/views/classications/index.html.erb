@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Classications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @classications.each do |classication| %>
+      <tr>
+        <td><%= classication.number %></td>
+        <td><%= classication.category %></td>
+         
+        <td><%= link_to 'Show', classication %></td>
+        <td><%= link_to 'Edit', edit_classication_path(classication) %></td>
+        <td><%= link_to 'Destroy', classication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Classication', new_classication_path %>
+
+
+
+
+
